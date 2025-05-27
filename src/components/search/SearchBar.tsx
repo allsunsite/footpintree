@@ -92,14 +92,14 @@ const SearchEngineIcon = ({ engine }: { engine: string }) => {
 };
 
 export function SearchBar({ 
-  placeholder = "Search bookmarks...", 
+  placeholder = "搜索书签...", 
   onSearch, 
-  currentEngine = "Bookmarks", 
+  currentEngine = "书签", 
   onEngineChange, 
   currentCollection = 'all', 
   onCollectionChange 
 }: SearchBarProps) {
-  const engines = ["Bookmarks", "Web Search", "AI Search"];
+  const engines = ["书签", "网页搜索", "AI搜索"];
   const [inputValue, setInputValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const editorRef = useRef<HTMLDivElement>(null);
@@ -116,7 +116,7 @@ export function SearchBar({
   };
 
   useEffect(() => {
-    if (currentEngine && currentEngine !== "Bookmarks") {
+    if (currentEngine && currentEngine !== "书签") {
       setInputValue("");
     }
   }, [currentEngine]);
@@ -128,14 +128,14 @@ export function SearchBar({
       return;
     }
     
-    if (currentEngine === "Bookmarks") {
+    if (currentEngine === "书签") {
       setIsSearching(true);
       try {
         onSearch?.(inputValue.trim(), currentCollection);
       } finally {
         setIsSearching(false);
       }
-    } else if (currentEngine === "Web Search") {
+    } else if (currentEngine === "网页搜索") {
       const searchUrls: { [key: string]: string } = {
         Google: `https://www.google.com/search?q=${encodeURIComponent(inputValue)}`,
         Baidu: `https://www.baidu.com/s?wd=${encodeURIComponent(inputValue)}`,
@@ -147,7 +147,7 @@ export function SearchBar({
       if (url) {
         window.open(url, '_blank');
       }
-    } else if (currentEngine === "AI Search") {
+    } else if (currentEngine === "AI搜索") {
       const url = aiSearchEngines[currentAIEngine as keyof typeof aiSearchEngines];
       if (url) {
         window.open(url + encodeURIComponent(inputValue), '_blank');
@@ -156,7 +156,7 @@ export function SearchBar({
   };
 
   const handleEngineChange = (engine: string) => {
-    if (engine === "Web Search") {
+    if (engine === "网页搜索") {
       onEngineChange?.(engine);
       if (!currentSearchEngine) {
         setCurrentSearchEngine("Google");
@@ -170,7 +170,7 @@ export function SearchBar({
 
   const handleSearchEngineChange = (engine: string) => {
     setCurrentSearchEngine(engine);
-    onEngineChange?.("Web Search");
+    onEngineChange?.("网页搜索");
   };
 
   const handleInput = (e: React.FormEvent<HTMLDivElement>) => {
@@ -291,11 +291,11 @@ export function SearchBar({
                   e.stopPropagation();
                 }}
               >
-                {currentEngine === "Bookmarks" && (
+                {currentEngine === "书签" && (
                   <div className="flex items-center gap-2">
                     {[
-                      { value: 'all', label: 'All Collections' },
-                      { value: 'current', label: 'Current Collection' }
+                      { value: 'all', label: '所有收藏集' },
+                      { value: 'current', label: '当前收藏集' }
                     ].map((option) => (
                       <button
                         key={option.value}
@@ -314,7 +314,7 @@ export function SearchBar({
                   </div>
                 )}
 
-                {currentEngine === "Web Search" && (
+                {currentEngine === "网页搜索" && (
                   <div className="flex items-center gap-2">
                     {['Google', 'Bing', 'Yandex', 'Baidu'].map((engine) => (
                       <button 
@@ -335,7 +335,7 @@ export function SearchBar({
                   </div>
                 )}
 
-                {currentEngine === "AI Search" && (
+                {currentEngine === "AI搜索" && (
                   <div className="flex items-center gap-2 flex-wrap">
                     {Object.keys(aiSearchEngines).map((engine) => (
                       <button 

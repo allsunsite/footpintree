@@ -295,7 +295,7 @@ export function BookmarkGrid({
       {enableSearch && (
         <div className="flex justify-center mt-4 mb-12">
           <SearchBar
-            placeholder="Search bookmarks..."
+            placeholder="搜索书签..."
             onSearch={performBookmarkSearch}
             currentEngine={currentEngine}
             onEngineChange={setCurrentEngine}

@@ -25,7 +25,7 @@ export function Footer() {
           {(
             <div className="text-sm text-muted-foreground order-first md:order-none flex items-center gap-1">
               <img src="/logo.svg" alt="Pintree Logo" className="h-4 w-4" />
-              Powered by{' '}
+              由
               <Link
                 href="https://pintree.io"
                 target="_blank"
@@ -34,6 +34,7 @@ export function Footer() {
               >
                 Pintree
               </Link>
+              提供支持
             </div>
           )}
 

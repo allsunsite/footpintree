@@ -10,7 +10,7 @@ export const defaultSettings: SettingItem[] = [
   // 基础设置
   {
     key: "websiteName",
-    value: "Pintree",
+    value: "Pintree 智能书签管理",
     type: "string",
     group: "basic",
     description: "网站名称"
@@ -31,7 +31,7 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "copyrightText",
-    value: "© 2024 Pintree. All rights reserved.",
+    value: "© 2024 Pintree。保留所有权利。",
     type: "string",
     group: "basic",
     description: "版权信息"
@@ -113,21 +113,21 @@ export const defaultSettings: SettingItem[] = [
   // SEO设置
   {
     key: "siteTitle",
-    value: "Pintree - Smart Bookmark Management & Organization Platform",
+    value: "Pintree - 智能书签管理与组织平台",
     type: "string",
     group: "seo",
     description: "网站标题"
   },
   {
     key: "description",
-    value: "Organize, manage and share your bookmarks efficiently with Pintree. Features AI-powered organization, custom collections, and seamless bookmark sharing for enhanced productivity.",
+    value: "使用 Pintree 高效整理、管理和分享你的书签。支持AI智能归类、自定义收藏集、便捷分享，助力提升生产力。",
     type: "string",
     group: "seo",
     description: "网站描述"
   },
   {
     key: "keywords",
-    value: "bookmark manager, bookmark organizer, bookmark collections, bookmark sharing, productivity tools, website organization, link management, bookmark tags, AI bookmarking, digital organization",
+    value: "书签管理, 书签整理, 书签收藏, 书签分享, 效率工具, 网站管理, 链接管理, 书签标签, AI书签, 数字化整理",
     type: "string",
     group: "seo",
     description: "关键词(用逗号分隔)"
@@ -155,7 +155,7 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "author",
-    value: "Pintree Team",
+    value: "Pintree 团队",
     type: "string",
     group: "seo",
     description: "作者信息"
@@ -236,7 +236,7 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "ctaButtonText",
-    value: "Claim your Pintree",
+    value: "立即领取你的 Pintree",
     type: "string",
     group: "feature",
     description: "CTA按钮文字"
@@ -264,14 +264,14 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "heroBannerTitle",
-    value: "Organize and Share Your Bookmarks Effortlessly",
+    value: "高效整理与分享你的书签",
     type: "string",
     group: "feature",
     description: "Hero Banner标题"
   },
   {
     key: "heroBannerDescription",
-    value: "Create, manage and share personalized bookmark collections with Pintree",
+    value: "用 Pintree 创建、管理和分享个性化书签收藏集，提升你的网络效率。",
     type: "string",
     group: "feature",
     description: "Hero Banner描述"
@@ -285,7 +285,7 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "heroBannerButtonText",
-    value: "Pintree.io",
+    value: "访问 Pintree.io",
     type: "string",
     group: "feature",
     description: "Hero Banner按钮文字"
@@ -299,7 +299,7 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "heroBannerSponsorText",
-    value: "Sponsored by",
+    value: "赞助：",
     type: "string",
     group: "feature",
     description: "Hero Banner赞助商文本"
@@ -369,21 +369,21 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "topBannerTitle",
-    value: "Pintree 1.0 Launched",
+    value: "Pintree 1.0 正式发布",
     type: "string",
     group: "feature",
     description: "Banner标题"
   },
   {
     key: "topBannerDescription",
-    value: "A bookmark manager that helps you collect, organize, and share your favorite websites.",
+    value: "一款帮助你收集、整理和分享喜爱网站的书签管理工具。",
     type: "string",
     group: "feature",
     description: "Banner描述"
   },
   {
     key: "topBannerButtonText",
-    value: "Learn More",
+    value: "了解更多",
     type: "string",
     group: "feature",
     description: "Banner按钮文本"
@@ -397,14 +397,14 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "sidebarAdsTitle",
-    value: "Organize Your Bookmarks",
+    value: "高效管理你的书签",
     type: "string",
     group: "feature",
     description: "侧边栏广告标题"
   },
   {
     key: "sidebarAdsDescription",
-    value: "Pintree helps you collect, organize and share your favorite websites in a beautiful way",
+    value: "Pintree 帮你优雅地收集、整理和分享你喜欢的网站。",
     type: "string",
     group: "feature",
     description: "侧边栏广告描述"
@@ -418,7 +418,7 @@ export const defaultSettings: SettingItem[] = [
   },
   {
     key: "sidebarAdsButtonText",
-    value: "Get Started",
+    value: "立即开始",
     type: "string",
     group: "feature",
     description: "侧边栏广告按钮文本"

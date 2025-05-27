@@ -121,7 +121,7 @@ export function EditFolderDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Edit Folder</DialogTitle>
+          <DialogTitle>编辑文件夹</DialogTitle>
           <DialogDescription>
             Modify folder properties and settings
           </DialogDescription>
@@ -129,7 +129,7 @@ export function EditFolderDialog({
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label>Name</Label>
+            <Label>名称</Label>
             <Input
               value={formData.name || ""}
               onChange={(e) =>
@@ -173,20 +173,20 @@ export function EditFolderDialog({
 
           {!formData.isPublic && (
             <div className="space-y-2">
-              <Label>Password</Label>
+              <Label>密码</Label>
               <Input
                 type="password"
                 value={formData.password}
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, password: e.target.value }))
                 }
-                placeholder="Set access password"
+                placeholder="设置访问密码"
               />
             </div>
           )}
 
           <div className="space-y-2">
-            <Label>Parent Folder</Label>
+            <Label>父文件夹</Label>
             <Select
               value={formData.parentId}
               onValueChange={(value) =>
@@ -194,10 +194,10 @@ export function EditFolderDialog({
               }
             >
               <SelectTrigger>
-                <SelectValue placeholder="Select Parent Folder" />
+                <SelectValue placeholder="请选择父文件夹" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="root">Root</SelectItem>
+                <SelectItem value="root">根目录</SelectItem>
                 {folders.map((f) => (
                   <SelectItem key={f.id} value={f.id}>
                     {f.name}
@@ -213,10 +213,10 @@ export function EditFolderDialog({
               variant="outline"
               onClick={() => onOpenChange(false)}
             >
-              Cancel
+              取消
             </Button>
             <Button type="submit" disabled={loading}>
-              {loading ? "Saving..." : "Save"}
+              {loading ? "保存中..." : "保存"}
             </Button>
           </div>
         </form>

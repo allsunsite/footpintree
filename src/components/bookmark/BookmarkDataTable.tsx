@@ -167,7 +167,7 @@ export function BookmarkDataTable({
   if (tableData.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">No items found</p>
+        <p className="text-gray-500">未找到任何项目</p>
       </div>
     );
   }
@@ -178,11 +178,11 @@ export function BookmarkDataTable({
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Title</TableHead>
-              <TableHead>Icon</TableHead>
-              <TableHead>Icon URL</TableHead>
-              <TableHead>Description</TableHead>
-              <TableHead>View Count</TableHead>
+              <TableHead>标题</TableHead>
+              <TableHead>图标</TableHead>
+              <TableHead>图标链接</TableHead>
+              <TableHead>描述</TableHead>
+              <TableHead>浏览次数</TableHead>
               <TableHead>
                 <Button
                   variant="ghost"
@@ -192,7 +192,7 @@ export function BookmarkDataTable({
                     onSortChange("createdAt", newOrder);
                   }}
                 >
-                  Created At
+                  创建时间
                   <ArrowUpDown className="ml-2 h-4 w-4" />
                 </Button>
               </TableHead>
@@ -205,11 +205,11 @@ export function BookmarkDataTable({
                     onSortChange("updatedAt", newOrder);
                   }}
                 >
-                  Updated At
-                  <ArrowUpDown className="ml-2 h-4 w-4" />
+                  更新时间
+                  <ArrowUpDown className="ml-2 h-4" />
                 </Button>
               </TableHead>
-              <TableHead>Actions</TableHead>
+              <TableHead>操作</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>

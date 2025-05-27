@@ -281,9 +281,9 @@ export function CreateBookmarkDialog({
               </PopoverTrigger>
               <PopoverContent className="w-full p-0">
                 <Command>
-                  <CommandInput placeholder="Search folders..." />
+                  <CommandInput placeholder="搜索文件夹..." />
                   <CommandList>
-                    <CommandEmpty>No folders found</CommandEmpty>
+                    <CommandEmpty>未找到文件夹</CommandEmpty>
                     <CommandGroup>
                       <CommandItem
                         onSelect={() => {
@@ -297,7 +297,7 @@ export function CreateBookmarkDialog({
                             !formData.folderId ? "opacity-100" : "opacity-0"
                           )}
                         />
-                        <span>Root</span>
+                        <span>根目录</span>
                       </CommandItem>
                       {folders.map((folder) => (
                         <CommandItem

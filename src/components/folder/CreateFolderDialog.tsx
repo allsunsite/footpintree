@@ -102,12 +102,12 @@ export function CreateFolderDialog({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>New Folder</DialogTitle>
+          <DialogTitle>新建文件夹</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label>Name</Label>
+            <Label>名称</Label>
             <Input
               value={formData.name}
               onChange={(e) =>
@@ -118,7 +118,7 @@ export function CreateFolderDialog({
           </div>
 
           <div className="space-y-2">
-            <Label>Parent Folder</Label>
+            <Label>父文件夹</Label>
             <Select
               value={formData.parentId}
               onValueChange={(value) =>
@@ -126,10 +126,10 @@ export function CreateFolderDialog({
               }
             >
               <SelectTrigger>
-                <SelectValue placeholder="Select Parent Folder" />
+                <SelectValue placeholder="请选择父文件夹" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="root">Root</SelectItem>
+                <SelectItem value="root">根目录</SelectItem>
                 {folders.map((folder) => (
                   <SelectItem key={folder.id} value={folder.id}>
                     {folder.name}

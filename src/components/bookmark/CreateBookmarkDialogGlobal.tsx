@@ -304,7 +304,7 @@ export default function CreateBookmarkDialogGlobal({
           </div>
 
           <div className="space-y-2">
-            <Label>Folder</Label>
+            <Label>文件夹</Label>
             <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
               <PopoverTrigger asChild>
                 <Button
@@ -313,15 +313,15 @@ export default function CreateBookmarkDialogGlobal({
                   aria-expanded={popoverOpen}
                   className="w-full justify-between"
                 >
-                  {folders.find(f => f.id === formData.folderId)?.displayName || "Select a folder"}
+                  {folders.find(f => f.id === formData.folderId)?.displayName || "请选择文件夹"}
                   <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-full p-0">
                 <Command>
-                  <CommandInput placeholder="Search folders..." />
+                  <CommandInput placeholder="搜索文件夹..." />
                   <CommandList>
-                    <CommandEmpty>No folders found</CommandEmpty>
+                    <CommandEmpty>未找到文件夹</CommandEmpty>
                     <CommandGroup>
                       <CommandItem
                         onSelect={() => {
